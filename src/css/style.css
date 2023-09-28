@@ -73,4 +73,46 @@ h1 {
 }
 .tab-menu-container .content .show {
   display: block !important;
+}
+
+.todo-container {
+  width: 100%;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.todo-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.todo-container button {
+  background-color: #008cba;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.todo-container ul {
+  list-style: none;
+  padding: 0;
+}
+.todo-container ul li {
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.todo-container .delete-button {
+  background-color: #ff4b4b;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

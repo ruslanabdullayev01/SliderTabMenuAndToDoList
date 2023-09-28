@@ -3,6 +3,10 @@ let nextBtn = document.getElementById("nextBtn");
 let sliderImg = document.getElementById("sliderImg");
 let sliderContainer = document.querySelector(".slider-container");
 
+let taskInput = document.getElementById("task");
+let addTaskButton = document.getElementById("add-task");
+let taskList = document.getElementById("task-list");
+
 let images = [
     "src/img/Collection _ Top 35 bmw m4 wallpaper hd (HD Download).jfif",
     "src/img/download (1).jfif",
@@ -51,3 +55,27 @@ for (let tab of tabs) {
         }
     });
 }
+
+addTaskButton.addEventListener('click', function () {
+    let taskText = taskInput.value.trim();
+    if (taskText !== '') {
+        let li = document.createElement('li');
+        li.innerHTML = `
+            <span>${taskText}</span>
+            <button class="delete-button">Delete</button>
+        `;
+        taskList.appendChild(li);
+        taskInput.value = '';
+
+        let deleteButton = li.querySelector('.delete-button');
+        deleteButton.addEventListener('click', function () {
+            taskList.removeChild(li);
+        });
+    }
+});
+
+taskInput.addEventListener('keypress', function (event) {
+    if (event.key === 'Enter') {
+        addTaskButton.click();
+    }
+});
